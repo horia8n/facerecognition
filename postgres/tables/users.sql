@@ -1,0 +1,11 @@
+BEGIN TRANSACTION;
+CREATE TABLE users (
+  ID      SERIAL PRIMARY KEY,
+  name    VARCHAR(100),
+  email   TEXT UNIQUE NOT NULL,
+  age   VARCHAR(3),
+  pet   TEXT,
+  entries BIGINT DEFAULT 0,
+  joined  TIMESTAMP   NOT NULL
+);
+COMMIT;
